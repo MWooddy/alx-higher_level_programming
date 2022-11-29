@@ -23,7 +23,8 @@ listint_t *insert_node(listint_t **head, int number)
 	if (head)
 		return (_insert_node(head, number));
 	return (NULL);
-}i#include "lists.h"
+}
+#include "lists.h"
 
 listint_t *_insert_node(listint_t **head, int number)
 {
