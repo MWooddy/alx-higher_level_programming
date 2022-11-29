@@ -1,4 +1,4 @@
-i#include "lists.h"
+#include "lists.h"
 
 listint_t *_insert_node(listint_t **head, int number)
 {
