@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-
-
 def remove_char_at(str, n):
-    """ Copy a string and remove a character at n """
-    return str[:n] + str[(len(str) + n) % len(str) + 1:]
+    if n > -1 and n < len(str):
+        str = f"{str[:n]}{str[n+1:]}"
+    return str
