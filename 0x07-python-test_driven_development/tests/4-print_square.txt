@@ -1,0 +1,86 @@
+==============================
+Test suite for: 4-print_square
+==============================
+
+Import method to test:
+	>>> print_square = __import__('4-print_square').print_square
+
+Basic case (success):
+
+	>>> print_square(7)
+	#######
+	#######
+	#######
+	#######
+	#######
+	#######
+	#######
+
+None case:
+
+	>>> print_square(None)
+	Traceback (most recent call last):
+	...
+	TypeError: size must be an integer
+
+Testing other data types:
+
+	String:
+
+	>>> print_square("Not an int")
+	Traceback (most recent call last):
+        ...
+        TypeError: size must be an integer
+
+	List:
+
+	>>> print_square(["Not", "an", "int"])
+	Traceback (most recent call last):
+        ...
+        TypeError: size must be an integer
+
+	Set:
+	
+	>>> print_square({"Set", "is", "not", "an", "int"})
+        Traceback (most recent call last):
+        ...
+        TypeError: size must be an integer
+
+	Tuple:
+
+	>>> print_square(("tuples", "is", "not", "an", "int"))
+        Traceback (most recent call last):
+        ...
+        TypeError: size must be an integer
+
+	Float:
+	>>> print_square(5.6)
+        Traceback (most recent call last):
+        ...
+        TypeError: size must be an integer
+
+Negative size:
+
+	>>> print_square(-200)
+	Traceback (most recent call last):
+	...
+	ValueError: size must be >= 0
+
+Size = 0:
+
+	>>> print_square(0)
+	
+
+Not passing arguments: 
+
+	>>> print_square()
+	Traceback (most recent call last):
+	...
+	TypeError: print_square() missing 1 required positional argument: 'size'
+
+Testing more arguments than one:
+
+	>>> print_square(4, 2)
+	Traceback (most recent call last):
+	...
+    	TypeError: print_square() takes 1 positional argument but 2 were given
